@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="nav-extended">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo"><span class=""> DASHBOARD </span></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a class="btn" onclick="M.toast({html: 'Are you sure you want to save the settings?', completeCallback: function(){alert('Your settings have been saved.')}})">Alerts</a></li>
+      <li><a class="waves-effect waves-light btn modal-trigger" href="#register">Register</a></li>
+      <li><a class="waves-effect waves-light btn modal-trigger" href="#mysettings">Settings</a></li>
+    </ul>
+  </div>
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a class="active" href="#home" onclick="M.AutoInit()">Home</a></li>
+      <li class="tab"><a href="#compliance">Compliance</a></li>
+      <li class="tab"><a href="#vulnerability">Vulnerability</a></li>
+      <li class="tab disabled"><a href="#windows10">Windows 10</a></li>
+      <li class="tab"><a href="#intune">Intune</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li class="tab"><a class="active" href="#home" onclick="M.AutoInit()">Home</a></li>
+  <li class="tab"><a href="#compliance">Compliance</a></li>
+  <li class="tab"><a href="#vulnerability">Vulnerability</a></li>
+  <li class="tab disabled"><a href="#windows10">Windows 10</a></li>
+  <li class="tab"><a href="#intune">Intune</a></li>
+  <li><a class="btn" onclick="M.toast({html: 'Are you sure you want to save the settings?', completeCallback: function(){alert('Your settings have been saved.')}})">Alerts</a></li>
+  <li><a class="waves-effect waves-light btn modal-trigger" href="#register">Register</a></li>
+  <li><a class="waves-effect waves-light btn modal-trigger" href="#mysettings">Settings</a></li>
+</ul>
+
+<div id="home" class="col s12"><app-home></app-home></div>
+<div id="compliance" class="col s12"><app-compliance></app-compliance></div>
+<div id="vulnerability" class="col s12"><app-vulnerability></app-vulnerability></div>
+<div id="windows10" class="col s12"><app-windows10></app-windows10>></div>
+<div id="intune" class="col s12"><app-intune></app-intune></div>
+
+<div id="register" class="modal modal-fixed-footer"><app-register-user></app-register-user></div>
+<div id="mysettings" class="modal modal-fixed-footer"><app-dashboard-settings></app-dashboard-settings></div>
+
+<router-outlet></router-outlet>
